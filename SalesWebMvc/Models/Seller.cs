@@ -11,10 +11,10 @@ namespace SalesWebMvc.Models
         public string Email { get; set; }
         public DateTime Birthdate { get; set; }
         public double BaseSalary { get; set; }
-
         //Associação:1 vendedor(Seller) possui 1 Departmento
         public Department Department { get; set; }
 
+        public int DepartmentId { get; set; }
         //Associação:1 vendedor(Seller) possui varios Registro de vendas(SalesRecord)
         public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
 
